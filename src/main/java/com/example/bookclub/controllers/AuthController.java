@@ -63,9 +63,7 @@ public class AuthController {
 			redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.loginUser", result);
 			return "redirect:/";
 		}
-		else {
-			
-		}
+
 		User userLogged = userService.loginUser(user, result);
 		if (userLogged== null) {
 			redirectAttributes.addFlashAttribute("loginUser", user);
